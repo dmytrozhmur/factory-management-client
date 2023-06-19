@@ -1,0 +1,164 @@
+#root {
+  margin: 0 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-height: 100vh;
+  max-width: 100vh;
+  /*margin: 0; */
+  /* padding: 2rem;
+  text-align: center; */
+}
+
+.logo {
+  /* height: 100%; */
+  /* padding-left: 33px; */
+  /* 9859 1 */
+  position: relative;
+
+  /* position: absolute; */
+  width: 858px;
+  height: 536px;
+  left: 30%;
+  /*top: 30%; */
+}
+
+/* .admintable {
+  position: relative;
+  left: 0px;
+} */
+
+.dashboard {
+  position: relative;
+  margin-left: 33vh;
+}
+
+.createButton {
+  position: absolute;
+  color: white;
+  top: 5%;
+  right: 5%;
+  text-decoration: none;
+}
+
+.languageSwitch {
+  position: absolute;
+  top: 15vh;
+  right: 50vh;
+}
+
+.submitButton {
+  position: absolute;
+  color: white;
+  background-color: blue;
+  width: 102px;
+  height: 48px;
+  margin-top: 30vh; 
+  margin-left: 542px;
+  cursor: pointer;
+}
+
+/* #factoryBtn {
+  position: absolute; 
+  width: 102px;
+  height: 48px;
+  padding-top: 253px; 
+  padding-left: 542px;
+  cursor: pointer;
+} */
+
+.field {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 300px;
+  height: 48px;
+
+  background: #FFFFFF;
+  border: 1px solid #D1D1D1;
+}
+
+label {
+  color: black;
+  font-size: 12px;
+}
+
+#nameField {
+  position: absolute; 
+  top: 50px;
+  margin-left: 0
+}
+
+#lnameField {
+  position: absolute; 
+  top: 50px; 
+  margin-left: 344px;
+}
+
+#addrField {
+  position: absolute; 
+  top: 50px; 
+  margin-left: 344px;
+}
+
+#phnField {
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 0;
+}
+
+#typeField {
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 0;
+}
+
+#emailField {
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 344px;
+}
+
+#passField {
+  position: absolute;
+  margin-top: 130px;
+  margin-left: 0;
+}
+
+#cpassField {
+  position: absolute;
+  margin-top: 130px;
+  margin-left: 344px;
+}
+
+input, label {
+  display:block;
+}
+/* .logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+} */
+
+/* @keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+/* 
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
