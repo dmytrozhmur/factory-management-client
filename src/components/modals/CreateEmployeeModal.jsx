@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import encodeUtf8 from 'encode-utf8'
 
-const CreateActivistModal = () => {
+const CreateEmployeeModal = () => {
   const nav = useNavigate();
   const [enteredName, setEnteredName] = useState('');
   const [enteredLname, setEnteredLname] = useState('');
@@ -12,14 +12,18 @@ const CreateActivistModal = () => {
   const [enteredCpass, setEnteredCpass] = useState('');
 
   function onAddPost(postData) {
-    fetch('http://localhost:5112/api/Activist', {
+    fetch('http://localhost:5112/api/Employee', {
       method: 'POST',
       body: JSON.stringify(postData),
       headers: {
         'Content-Type': 'application/json',
       },
     });
-    nav('/factory/activists');
+    
+    setTimeout(() => {
+      nav('/factory/employee');
+      location.reload();
+    }, 2000);
     // setPosts((existingPosts) => [postData, ...existingPosts]);
   }
 
@@ -56,7 +60,8 @@ const CreateActivistModal = () => {
       phone: enteredPhone,
       email: enteredEmail,
       password: enteredPass,
-      publicOrganization: "testOrg"
+      beginningWorkingDay: new Date().toJSON(),
+      factoryId: "testId"
     };
     if (enteredPass == enteredCpass) {
         onAddPost(postData);
@@ -65,7 +70,7 @@ const CreateActivistModal = () => {
 
   return (
     <div className="dashboard">
-      <h1 style={{ color: 'blue', marginBottom: '50px', marginTop: 0 }}>Create activist</h1>
+      <h1 style={{ color: 'blue', marginBottom: '50px', marginTop: 0 }}>Employee</h1>
       <form className="createForm" onSubmit={submitHandler}>
         {/* <div style={{display: 'flex', flexDirection: 'column'}}> */}
           <p id='nameField'>
@@ -101,4 +106,4 @@ const CreateActivistModal = () => {
   );
 };
 
-export default CreateActivistModal;
+export default CreateEmployeeModal;

@@ -10,16 +10,22 @@ import AdminDashboard from './components/AdminDashboard'
 import FactoriesDashboard from './components/FactoriesDashboard'
 import ProfileDashboard from './components/ProfileDashboard'
 import SettingsMenu from './components/SettingsMenu'
-import CreateFactoryModal from './components/CreateFactoryModal'
-import CreateAdminModal from './components/CreateAdminModal'
+import CreateFactoryModal from './components/modals/CreateFactoryModal'
+import CreateAdminModal from './components/modals/CreateAdminModal'
 import EmployeesDashboard from './components/EmployeesDashboard'
 import ActivistsDashboard from './components/ActivistsDashboard'
-import CreateEmployeeModal from './components/CreateEmployeeModal'
-import CreateActivistModal from './components/CreateActivistModal'
-import CreatePaymentModal from './components/CreatePaymentModal'
+import CreateEmployeeModal from './components/modals/CreateEmployeeModal'
+import CreateActivistModal from './components/modals/CreateActivistModal'
+import CreatePaymentModal from './components/modals/CreatePaymentModal'
 import PaymentSuccess from './components/PaymentSuccess'
+import LoginPanel from './components/LoginPanel'
+import LoginPageLayout from './routes/LoginPageLayout'
 
 const router = createBrowserRouter([
+      {
+        path: '/',
+        element: <LoginPageLayout Content={<BaseContent />} />
+      },
       {
         path: '/admin',
         element: <AdminPageLayout Content={<BaseContent />} />

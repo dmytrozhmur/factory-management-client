@@ -68,6 +68,17 @@
   cursor: pointer;
 }
 
+.loginButton {
+  position: absolute;
+  color: white;
+  background-color: blue;
+  width: 102px;
+  height: 48px;
+  margin-top: 200px; 
+  margin-left: 248px;
+  cursor: pointer;
+}
+
 /* #factoryBtn {
   position: absolute; 
   width: 102px;
@@ -85,7 +96,9 @@
   height: 48px;
 
   background: #FFFFFF;
+  color: black;
   border: 1px solid #D1D1D1;
+  z-index: 1;
 }
 
 .cardNumField {
@@ -198,6 +211,18 @@ label {
   margin-top: 50px;
   margin-left: 300px;
   font-weight: bold;
+}
+
+#lEmailField {
+  position: absolute;
+  margin-top: 0;
+  margin-left: 50px;
+}
+
+#lPassField {
+  position: absolute;
+  margin-top: 65px;
+  margin-left: 50px;
 }
 
 input, label {

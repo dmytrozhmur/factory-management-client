@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import encodeUtf8 from 'encode-utf8'
 
-const CreateEmployeeModal = () => {
+const CreateAdminModal = () => {
   const nav = useNavigate();
   const [enteredName, setEnteredName] = useState('');
   const [enteredLname, setEnteredLname] = useState('');
@@ -12,14 +11,18 @@ const CreateEmployeeModal = () => {
   const [enteredCpass, setEnteredCpass] = useState('');
 
   function onAddPost(postData) {
-    fetch('http://localhost:5112/api/Employee', {
+    fetch('http://localhost:5112/api/FactoryAdministrator', {
       method: 'POST',
       body: JSON.stringify(postData),
       headers: {
         'Content-Type': 'application/json',
       },
     });
-    nav('/factory/employee');
+
+    setTimeout(() => {
+      nav('/admin/accounts');
+      location.reload();
+    }, 2000);
     // setPosts((existingPosts) => [postData, ...existingPosts]);
   }
 
@@ -60,12 +63,14 @@ const CreateEmployeeModal = () => {
     };
     if (enteredPass == enteredCpass) {
         onAddPost(postData);
+    } else {
+        
     }
   }
 
   return (
     <div className="dashboard">
-      <h1 style={{ color: 'blue', marginBottom: '50px', marginTop: 0 }}>Employee</h1>
+      <h1 style={{ color: 'blue', marginBottom: '50px', marginTop: 0 }}>Factory admins</h1>
       <form className="createForm" onSubmit={submitHandler}>
         {/* <div style={{display: 'flex', flexDirection: 'column'}}> */}
           <p id='nameField'>
@@ -101,4 +106,4 @@ const CreateEmployeeModal = () => {
   );
 };
 
-export default CreateEmployeeModal;
+export default CreateAdminModal;

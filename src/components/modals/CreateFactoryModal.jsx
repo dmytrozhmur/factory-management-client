@@ -15,7 +15,11 @@ const CreateFactoryModal = () => {
         'Content-Type': 'application/json',
       },
     });
-    nav('/admin/factories');
+
+    setTimeout(() => {
+      nav('/admin/factories');
+      location.reload();
+    }, 2000);
     // setPosts((existingPosts) => [postData, ...existingPosts]);
   }
 

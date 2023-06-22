@@ -39,7 +39,7 @@ export default function EmployeesDashboard() {
     setRowsPerPage(+event.target.value);
     setPage(0);
   };
-
+  
   return (
     <>
         <div className='dashboard'>
@@ -86,7 +86,7 @@ export default function EmployeesDashboard() {
                 <TablePagination
                     rowsPerPageOptions={[10, 25, 100]}
                     component="div"
-                    // count={rows.length}
+                    count={rows.length}
                     rowsPerPage={rowsPerPage}
                     page={page}
                     onPageChange={handleChangePage}
