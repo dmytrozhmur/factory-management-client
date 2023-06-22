@@ -5,13 +5,19 @@ import MainPageLayout from './routes/MainPageLayout'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import ActivistPageLayout from './routes/ActivistPageLayout'
 import AdminPageLayout from './routes/AdminPageLayout'
-import EmployeePageLayout from './routes/EmployeePageLayout'
+import FactoryAdminPageLayout from './routes/FactoryAdminPageLayout'
 import AdminDashboard from './components/AdminDashboard'
 import FactoriesDashboard from './components/FactoriesDashboard'
 import ProfileDashboard from './components/ProfileDashboard'
 import SettingsMenu from './components/SettingsMenu'
 import CreateFactoryModal from './components/CreateFactoryModal'
 import CreateAdminModal from './components/CreateAdminModal'
+import EmployeesDashboard from './components/EmployeesDashboard'
+import ActivistsDashboard from './components/ActivistsDashboard'
+import CreateEmployeeModal from './components/CreateEmployeeModal'
+import CreateActivistModal from './components/CreateActivistModal'
+import CreatePaymentModal from './components/CreatePaymentModal'
+import PaymentSuccess from './components/PaymentSuccess'
 
 const router = createBrowserRouter([
       {
@@ -47,8 +53,40 @@ const router = createBrowserRouter([
         element: <ActivistPageLayout Content={<BaseContent />} />
       },
       {
-        path: '/employee', 
-        element: <EmployeePageLayout Content={<BaseContent />} />
+        path: '/factory', 
+        element: <FactoryAdminPageLayout Content={<BaseContent />} />
+      },
+      {
+        path: '/factory/employee', 
+        element: <FactoryAdminPageLayout Content={<EmployeesDashboard />} />
+      },
+      {
+        path: '/factory/activists', 
+        element: <FactoryAdminPageLayout Content={<ActivistsDashboard />} />
+      },
+      {
+        path: '/factory/profile', 
+        element: <FactoryAdminPageLayout Content={<ProfileDashboard />} />
+      },
+      {
+        path: '/factory/setting', 
+        element: <FactoryAdminPageLayout Content={<SettingsMenu />} />
+      },
+      {
+        path: '/factory/employee/create', 
+        element: <FactoryAdminPageLayout Content={<CreateEmployeeModal />} />
+      },
+      {
+        path: '/factory/activists/create', 
+        element: <FactoryAdminPageLayout Content={<CreateActivistModal />} />
+      },
+      {
+        path: '/factory/payment', 
+        element: <FactoryAdminPageLayout Content={<CreatePaymentModal />} />
+      },
+      {
+        path: '/factory/payment/success', 
+        element: <FactoryAdminPageLayout Content={<PaymentSuccess />} />
       }
     ])
 

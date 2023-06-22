@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-const EmployeeMenuPanel = () => {
+const FactoryAdminMenuPanel = () => {
   const [selectedItem, setSelectedItem] = useState(null);
 
   const handleItemClick = (item) => {
@@ -21,32 +22,42 @@ const EmployeeMenuPanel = () => {
           padding: '20px',
         }}
       >
+      <Link to='/factory/employee'>
         <MenuItem
           text="Employee"
           selected={selectedItem === 'Employee'}
           onItemClick={handleItemClick}
         />
+      </Link>
+      <Link to='/factory/activists'>
         <MenuItem
           text="Activists"
           selected={selectedItem === 'Activists'}
           onItemClick={handleItemClick}
         />
-        <MenuItem
+      </Link>
+      <Link to='/factory/payment'>
+         <MenuItem
           text="Payment"
           selected={selectedItem === 'Payment'}
           onItemClick={handleItemClick}
         />
-        <hr style={{ margin: '10px 0', border: 'none', borderBottom: '1px solid black' }} />
+      </Link>
+      <hr style={{ margin: '10px 0', border: 'none', borderBottom: '1px solid black' }} />
+      <Link to='/factory/profile'>
         <MenuItem
           text="Profile"
           selected={selectedItem === 'Profile'}
           onItemClick={handleItemClick}
         />
+      </Link>
+      <Link to='/factory/setting'>
         <MenuItem
           text="Setting"
           selected={selectedItem === 'Setting'}
           onItemClick={handleItemClick}
         />
+      </Link>
       </div>
     </div>
   );
@@ -78,4 +89,4 @@ const MenuItem = ({ text, selected, onItemClick }) => {
   );
 };
 
-export default EmployeeMenuPanel;
+export default FactoryAdminMenuPanel;

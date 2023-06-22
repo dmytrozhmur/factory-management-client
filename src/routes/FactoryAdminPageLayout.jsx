@@ -1,20 +1,14 @@
 import { Outlet } from "react-router-dom";
 import AdminMenuPanel from "../components/AdminMenuPanel";
-import EmployeeMenuPanel from "../components/FactoryAdminMenuPanel";
+import FactoryAdminMenuPanel from "../components/FactoryAdminMenuPanel";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import ActivistMenuPanel from "../components/ActivistMenuPanel";
 
-// var Panel;
-
-// const router = createBrowserRouter([
-//     <div>Panel</div>
-
-// ])
-
-function AdminPageLayout({Content}) {
+function FactoryAdminPageLayout({Content}) {
     return (
         <>
             <div style={{ display: 'flex', height: '100%' }}>
-                <AdminMenuPanel />
+                <FactoryAdminMenuPanel />
                 <div style={{ flex: 1, padding: '20px' }}>
                     {Content}
                 </div>
@@ -23,4 +17,4 @@ function AdminPageLayout({Content}) {
     );
 }
 
-export default AdminPageLayout;
+export default FactoryAdminPageLayout;
